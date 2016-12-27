@@ -1,0 +1,558 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    z-index: 0;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body
+{
+    background-image: url("../../img/admin/bg.png");
+    font-family: sans-serif;
+}
+
+.ezdz-dropzone
+{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #999999;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.ezdz-focus
+{
+    border-color: #444444;
+}
+
+.ezdz-enter
+{
+    border-color: #FFFFFF;
+}
+
+.ezdz-accept
+{
+    border-color: #398439;
+}
+
+.ezdz-reject
+{
+    border-color: #880000;
+}
+
+.award-box .ezdz-dropzone
+{
+    height: 38px;
+}
+
+#pthumbform .ezdz-dropzone
+{
+    height: 162px;
+}
+
+.ezdz-dropzone div
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+}
+
+.award-box .ezdz-dropzone div, #pthumbform .ezdz-dropzone div
+{
+    font-size: 16px;
+}
+
+.ezdz-dropzone input[type="file"]
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.loader
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 21, 21, 0.7) url("../../img/admin/cmslogo.png") center top no-repeat;
+    z-index: 20;
+}
+
+.loader:before
+{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 10px solid #6F6F6F;
+    border-left-color: #8F8F8F;
+    border-radius: 50%;
+    top:50%;
+    right:50%;
+    margin:-35px -35px 0 0;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-animation: load 1.1s infinite linear;
+    animation: load 1.1s infinite linear;
+}
+
+@-webkit-keyframes load
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.loader p
+{
+    position: absolute;
+    width: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    margin: 60px 0 0 -30px;
+}
+
+.input-box
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 0;
+}
+
+.form-text
+{
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    color: #666666;
+}
+
+.form-text:focus
+{
+    box-shadow: 0 0 5px #FFFFFF;
+}
+
+.form-select
+{
+    padding: 5px 0;
+}
+
+.form-submit
+{
+    width: 100%;
+    border: none;
+    background-color: #000000;
+    padding: 5px 0;
+    color: #FFFFFF;
+}
+
+.form-submit:hover
+{
+    background-color: #444444;
+}
+
+.form-button
+{
+    display: inline-block;
+    border: none;
+    background-color: #000000;
+    padding: 5px 10px;
+    margin: 5px 0;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.form-button:hover
+{
+    background-color: #444444;
+}
+
+.form-label
+{
+    color: #FFFFFF;
+    width: 120px;
+    display: inline-block;
+}
+
+.form-h
+{
+    color: #FFFFFF;
+}
+
+.form-full
+{
+    width: 100%;
+}
+
+.extra-box, .award-box, .press-box, .link-box
+{
+    border: 1px solid #000000;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #3C3C3C;
+}
+
+.div-hide
+{
+    display: none;
+}
+
+#prthumb, .up-imgs
+{
+    display: inline-block;
+    height: 150px;
+    margin: 0 0 2px 5px;
+}
+
+.aheader
+{
+    width: 100%;
+    height: 80px;
+    background-color: #333333;
+    border-bottom: 1px solid #000000;
+    font-size: 0;
+}
+
+.aamenu
+{
+    display: inline-block;
+    height: 100%;
+    padding: 0 10px;
+    line-height: 80px;
+    vertical-align: middle;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-right: 1px solid #000000;
+    font-size: 16px;
+}
+
+.aamenu:hover
+{
+    background-color: #3C3C3C;
+}
+
+.asection
+{
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - 81px);
+}
+
+#part-cont
+{
+    position: absolute;
+    padding: 20px 50px 20px 40px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333333;
+    border: 1px solid #000000;
+}
+
+#part-cont a
+{
+    display: block;
+    padding-bottom: 10px;
+    color: #DDDDDD;
+    text-decoration: none;
+}
+
+#part-cont a:hover
+{
+    color: #FFFFFF;
+}
+
+#loginform, #chpassform
+{
+    position: relative;
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    top: 100px;
+    left: calc(50% - 150px);
+    background-color: #333333;
+    border: 1px solid #000000;
+}
+
+.pno
+{
+    position: absolute;
+    padding: 20px 50px;
+    background-color: #333333;
+    color: #FFFFFF;
+    border: 1px solid #000000;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pbox
+{
+    width: 700px;
+    height: 250px;
+    display: flex;
+    background-color: #333333;
+    border: 1px solid #000000;
+    margin-top: 30px;
+    margin: 30px auto 0 auto;
+}
+
+.pimgbox, .piebox
+{
+    position: relative;
+    display: inline-block;
+    height: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.pimgbox
+{
+    width: 250px;
+}
+
+.pimg
+{
+    position: absolute;
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+
+.piebox
+{
+    width: 449px;
+    border-left: 1px solid #000000;
+}
+
+.pinfobox
+{
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.ptitle
+{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.pedit
+{
+    display: block;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #DDDDDD;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.pedit:hover
+{
+    color: #FFFFFF;
+}
+
+#pnewform, #pinfoform
+{
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #333333;
+    border: 1px solid #000000;
+}
+
+#pnewform .form-text, #pinfoform .form-text
+{
+    width: calc(100% - 130px);
+}
+
+#pnewform .award-info .form-text
+{
+    width: calc(100% - 60px);
+}
+
+#pnewform .form-textarea, #pinfoform .form-textarea
+{
+    height: 400px;
+}
+
+#newcategory, #newstatus
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 21, 21, 0.7);
+    z-index: 5;
+    visibility: hidden;
+}
+
+#newcategory.active, #newstatus.active
+{
+    visibility: visible;
+}
+
+#newcategoryform, #newstatusform
+{
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3C3C3C;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+#newcategoryform .form-label, #newstatusform .form-label
+{
+    width: 30px;
+}
+
+#newcategoryform .form-text, #newstatusform .form-text
+{
+    width: calc(100% - 35px);
+}
+
+.close-form
+{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.close-form:before, .close-form:after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #AA0000;
+    left: 0;
+    top: 10px;
+}
+
+.close-form:hover:before, .close-form:hover:after
+{
+    background-color: #FF0000;
+}
+
+.close-form:before
+{
+    transform: rotate(45deg);
+}
+
+.close-form:after
+{
+    transform: rotate(-45deg);
+}
+
+#porderform
+{
+    width: 702px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #333333;
+    border: 1px solid #000000;
+}
+
+#porderform .pbox
+{
+    background-color: #3C3C3C;
+}
+
+#porderform .input-box:last-of-type
+{
+    padding-top: 20px;
+}
+
+#pnewimagesform, #porderimagesform
+{
+    width: 700px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    border: 1px solid #000000;
+    background-color: #333333;
+}
+
+#porderimagesform .pbox
+{
+    width: calc(100% - 2px);
+    background-color: #3C3C3C;
+}
+
+#porderimagesform .pbox:last-of-type
+{
+    margin-bottom: 30px;
+}
+
+#pawardsform, #ppressform, #plinksform
+{
+    width: 700px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #333333;
+    border: 1px solid #000000;
+}
