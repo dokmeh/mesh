@@ -11,10 +11,14 @@
     <h2 class="article-num">Bring your idea into</h2>
     <h2 class="article-num">Bring idea into reality</h2>
     <h2 class="article-num">Bringg idea into reality</h2> -->
+    <h2>Solid <span>Prototyping & MVP Development</span> for great ideas.</h2>
+    <h4>Know more about us-</h4>
   </p>
-  <!-- <script type="text/javascript">
-    $('[data-typer-targets]').typer();
-  </script> -->
+  </div>
+  <div class="slides">
+      <div class="slide">
+          <img src="img/projects/1.jpg" alt="">
+      </div>
   </div>
 
 </div>
