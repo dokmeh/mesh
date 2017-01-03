@@ -8,6 +8,9 @@
     <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="js/snap.svg-min.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/scroll.revel.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/anime.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/scrollMonitor.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/reval-text.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/init.js"></script>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/general2.css">
@@ -28,7 +31,7 @@
     <section class="content home-slide {!! $data['page'] !!}">
         {!! $data['content'] !!}
     </section>
-    <section class="menu">
+    <section class="menu" >
         <div class="menubox">
             <!-- <form id="tfnewsearch" method="get" action="http://www.google.com">
                 <input type="text" class="tftextinput" name="q" size="21" maxlength="120" placeholder="Search"><input type="submit" value="search" class="tfbutton">
@@ -47,6 +50,11 @@
                 <li><a href="#">Banamid Institue</a></li>
                 <li><a href="#">Banamid TV</a></li>
             </ul> -->
+        </div>
+        <div class="menu-spin" id="rev-3">
+            <div>
+                <p>MENU</p><p>X</p>
+            </div>
         </div>
     </section>
 </section>
