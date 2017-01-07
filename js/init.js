@@ -4,9 +4,13 @@ $(document).ready(function () {
     $('.menu-spin').click(function () {
         $('.menu').toggleClass('open');
     });
+    if($('body').attr('data-page') != 'home'){
+        $('.menu-spin').addClass('menu-up');
+        $('.menu').addClass('menu-right').removeClass('open');
+    }
     setTimeout(function () {
         $('svg#Enter-logo').addClass('intro-logo-op-ef');
-    })
+    });
     $('nav li a').click(function () {
         window.history.pushState(null, null, $(this).attr('href'));
         loadajax($(this).attr('href'));
@@ -54,6 +58,7 @@ function changearticles() {
 }
 
 function loadajax(url) {
+    console.log(url);
     $.ajax({
         url: 'aj' + url,
         method: "GET",
@@ -71,6 +76,10 @@ function loadajax(url) {
             loaded();
             try {
                 window[$('body').attr('data-page')]();
+                if($('body').attr('data-page') != 'home'){
+                    $('.menu-spin').addClass('menu-up');
+                    $('.menu').addClass('menu-right').removeClass('open');
+                }
             }
             catch (err) {
                 // Handle error(s) here
@@ -271,7 +280,7 @@ function home() {
 
 function projects() {
     window.sr = ScrollReveal().reveal('.a-w-d', {duration: 1000, reset: true}, 100);
-    $('.thumb a').click(function () {
+    $('.all-thumb-handler a').click(function () {
         window.history.pushState(null, null, $(this).attr('href'));
         loadajax($(this).attr('href'));
         return false;
@@ -336,6 +345,9 @@ function project() {
 
 function events() {
     projects();
+}
+function contact() {
+
 }
 
 function event() {

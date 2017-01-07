@@ -21,7 +21,7 @@
     <div class="identity">
         <img class="logo-identity a-w-d" src="img/logo.svg">
         <div class="menubt">
-            <h3>Menu</h3>
+            <h3>Explore</h3>
             <i class="fa fa-ellipsis-v"></i>
             <i class="fa fa-times fa-hide"></i>
         </div>
@@ -53,7 +53,7 @@
         </div>
         <div class="menu-spin" id="rev-3">
             <div>
-                <p>MENU</p><p>X</p>
+                <p>Explore</p><p>X</p>
             </div>
         </div>
     </section>
