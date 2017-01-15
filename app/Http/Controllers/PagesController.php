@@ -91,4 +91,15 @@ class PagesController extends Controller
         $data = ['title' => 'Mesh Studio-News / Events', 'page' => 'event', 'content' => view('event')->render()];
         return $data;
     }
+    public function contact()
+    {
+        $data = $this->contact_ajax();
+        return view('master', compact('data'));
+    }
+
+    public function contact_ajax()
+    {
+        $data = ['title' => 'Mesh Studio', 'page' => 'contact', 'content' => view('contact')->render()];
+        return $data;
+    }
 }

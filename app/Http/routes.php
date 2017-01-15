@@ -19,12 +19,16 @@ Route::get('works/{url}', 'PagesController@work');
 Route::get('ajworks/{url}', 'PagesController@work_ajax');
 Route::get('studio', 'PagesController@studio');
 Route::get('ajstudio', 'PagesController@studio_ajax');
+Route::get('contact', 'PagesController@contact');
+Route::get('ajcontact', 'PagesController@contact_ajax');
 Route::get('research', 'PagesController@research');
 Route::get('ajresearch', 'PagesController@research_ajax');
 Route::get('news-events', 'PagesController@events');
 Route::get('ajnews-events', 'PagesController@events_ajax');
 Route::get('news-events/{url}', 'PagesController@event');
 Route::get('ajnews-events/{url}', 'PagesController@event_ajax');
+
+
 
 Route::group(['prefix' => 'admin', 'middleware' => ['web']], function(){
     Route::group(['middleware' => 'isloggedin', 'namespace'=>'Admin'], function(){

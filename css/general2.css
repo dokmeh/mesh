@@ -556,10 +556,11 @@ ul.categorys a:hover:after {
     align-items: center;
 }
 
-.research .right{
-    width:25vw;
+.research .right {
+    width: 25vw;
     padding: 0 25vw;
 }
+
 section.content.home {
     height: calc(100vh - 100px);
     display: block;
@@ -752,10 +753,6 @@ section.content.home {
         bottom: auto;
     }
 
-    .homecontainer {
-        width: calc(100% - 36px);
-        bottom: auto;
-    }
 }
 
 .projects a, .project a, .events a {
@@ -904,7 +901,7 @@ section.content.home {
 
 .gallery {
     width: inherit;
-    height: 100vh;
+    height: 60vh;
     /* padding-bottom: 75%; */
     margin: 0;
     position: relative;
@@ -912,7 +909,7 @@ section.content.home {
 
 .gallery .slides {
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     transition: 800ms ease-in-out all;
     opacity: 0;
@@ -957,7 +954,7 @@ section.content.home {
 }
 
 .project h4,.event h4 {
-    padding: 30px 12px;
+    padding: 30px 0;
     font-size: 12px;
     width: 100%;
 }
@@ -971,8 +968,8 @@ section.content.home {
 .project .images-nav {
     position: absolute;
     height: 30px;
-    margin-left: -32px;
-    width: calc(100% + 64px);
+    margin-left: 90px;
+    width: calc(100vw - 190px);
     top: calc(50% - 15px);
 }
 
@@ -1377,10 +1374,6 @@ section.menu.open.menu-right nav.a-w-d {
     opacity: 0;
 }
 
-section.menu.open div {
-    /* top:0; */
-}
-
 section.menu.open div p:first-child {
     opacity: 0;
 }
@@ -1451,11 +1444,137 @@ a.thumb.projects-boxes.a-w-d.pr-hide {
     width: 50% ;
 }
 
-
 .aboutus-p.page {
     width: 50%;
 }
 
 .team.page {
     width: inherit;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.box.banamid-box {
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+    max-height: 295px;
+    overflow: hidden;
+    padding-bottom: 60px;
+    transition: 500ms ease;
+}
+
+.readmore-bt {
+    position: absolute;
+    bottom: 0;
+    background: red;
+    padding: 2px 10px;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all400ms cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+}
+
+.box.banamid-box a {
+    color: red;
+    text-align: left;
+    width: Auto;
+}
+
+.readmore-bt:hover {
+    padding: 5px 10px;
+}
+
+.readmore-bt span:last-of-type {
+    display: none;
+}
+
+.box.banamid-box.event-box-op {
+    max-height: 100vh;
+}
+
+.readmore-bt.more-bt-op span:first-of-type {
+    display: none;
+}
+
+.readmore-bt.more-bt-op span:last-of-type {
+    display: block;
+}
+
+.box.banamid-box p {
+    margin: 50px 0;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .home-discription{
+        
+    }
+    .homecontainer{
+        padding: 10px;
+        width: calc(100vw  - 20px);
+    }
+    .ex-bt{
+        position: absolute;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    section.menu {
+        justify-content: flex-end;
+    }
+    .home-discription{
+        flex-grow: 2;
+        width: 100vw;
+    }
+    .ex-bt{
+        flex-grow:1;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    /* Styles */
 }

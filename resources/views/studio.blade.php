@@ -1,5 +1,5 @@
 <div class="left">
-    <div class="left-mask">
+{{--    <div class="left-mask">
         <h3>Categorys</h3>
         <ul class="categorys">
             <li><a href="#">Who are we</a></li>
@@ -8,7 +8,7 @@
             <li><a href="#">Team</a></li>
             <li><a href="#">Awards/Honours</a></li>
         </ul>
-    </div>
+    </div>--}}
 </div>
 <div class="right">
     <div class="aboutus-p page">

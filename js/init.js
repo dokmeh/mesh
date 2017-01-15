@@ -369,4 +369,8 @@ function studio() {
 
 function research() {
     console.log('research');
+    $('.readmore-bt').click(function () {
+        $(this).toggleClass('more-bt-op');
+        $(this).parent().toggleClass('event-box-op');
+    })
 }
