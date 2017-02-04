@@ -58,7 +58,6 @@ function changearticles() {
 }
 
 function loadajax(url) {
-    console.log(url);
     $.ajax({
         url: 'aj' + url,
         method: "GET",
@@ -282,7 +281,7 @@ function projects() {
     window.sr = ScrollReveal().reveal('.a-w-d', {duration: 1000, reset: true}, 100);
     $('.all-thumb-handler a').click(function () {
         window.history.pushState(null, null, $(this).attr('href'));
-        loadajax($(this).attr('href'));
+        loadajax($(this).attr('href'),$(this).attr('data-pr-id'));
         return false;
     });
     $('.projects-category-list li').click(function functionName() {
@@ -302,7 +301,9 @@ function projects() {
 }
 
 function project() {
-    console.log('project');
+
+    //$('.title-pr').text($('body').attr('data-pr-id'));
+
     $('body').find('.project .leftarrow').click(function () {
         imageNav('next');
     });

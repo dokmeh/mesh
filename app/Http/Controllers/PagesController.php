@@ -40,9 +40,29 @@ class PagesController extends Controller
 
     public function work_ajax($url)
     {
-        $data = ['title' => 'Mesh Studio-Works', 'page' => 'project', 'content' => view('work')->render()];
+        $data = ['title' => 'Mesh Studio-'.$url, 'page' => 'project', 'content' => view($url)->render(),'id' => $url];
         return $data;
     }
+
+
+
+
+    public function project(Request $request, $id)
+    {
+        $page    = 'project';
+        $project = Project::find($id)->load('photos');
+        $content = view('project', compact('project'));
+        if ($request->ajax()) {
+            return $content;
+        } else {
+            return view('layout', compact('page', 'content'));
+        }
+    }
+
+
+
+
+
 
     public function studio()
     {

@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/general2.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body class="{!! $data['page'] == 'home' ? 'intro' : 'body-after-enter' !!}" data-page="{!! $data['page'] !!}" data-device="{!! get_device() !!}">
+<body class="{!! $data['page'] == 'home' ? 'intro' : 'body-after-enter' !!}" data-page="{!! $data['page'] !!}" data-device="{!! get_device() !!}" data-pr-id="{!! $data['id'] or '' !!}">
 <section class="maintransition{!! $data['page'] == 'home' ? '' : ' main-open' !!}">
     <div class="identity">
         <img class="logo-identity a-w-d" src="img/logo.svg">
@@ -228,7 +228,7 @@
     <div class="footer-grid">
         <h3>Contact us</h3>
         <!-- <p class="under-contact-identity">Meghdad Sharfi Architects</p> -->
-        <p>phone: +98 21 88 88 8888 / +98 21 88 88 8888</p>
+        <a href="tel:+98(21)26410305">Phone : +98(21)26410305-7</a>
         <i class="a-w-d fa fa-facebook-square"></i>
         <i class="a-w-d fa fa-instagram"></i>
         <i class="a-w-d fa fa-map"></i>
