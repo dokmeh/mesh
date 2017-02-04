@@ -1,12 +1,16 @@
-<div class="right">
+<div class="left">
     <div class="right-mask">
         <ul class="categorys">
-            <li>Thu, 20/10/1394</li>
-            <li>15:20 PM</li>
+            <p>Thu, 20/10/1394</p>
+            <p>15:20 PM</p>
+            <hr>
+            <h5>Resent Articles </h5>
+            <li>Some other</li>
+            <li>Some other article</li>
         </ul>
     </div>
 </div>
-<div class="left">
+<div class="right">
     <div class="project-info page">
         <h3>Event / News Title</h3>
     </div>

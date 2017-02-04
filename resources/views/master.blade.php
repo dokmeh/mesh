@@ -8,17 +8,20 @@
     <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="js/snap.svg-min.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/scroll.revel.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/anime.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/scrollMonitor.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/reval-text.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/init.js"></script>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/general2.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body class="{!! $data['page'] == 'home' ? 'intro' : 'body-after-enter' !!}" data-page="{!! $data['page'] !!}" data-device="{!! get_device() !!}">
+<body class="{!! $data['page'] == 'home' ? 'intro' : 'body-after-enter' !!}" data-page="{!! $data['page'] !!}" data-device="{!! get_device() !!}" data-pr-id="{!! $data['id'] or '' !!}">
 <section class="maintransition{!! $data['page'] == 'home' ? '' : ' main-open' !!}">
     <div class="identity">
         <img class="logo-identity a-w-d" src="img/logo.svg">
         <div class="menubt">
-            <h3>Menu</h3>
+            <h3>Explore</h3>
             <i class="fa fa-ellipsis-v"></i>
             <i class="fa fa-times fa-hide"></i>
         </div>
@@ -28,7 +31,7 @@
     <section class="content home-slide {!! $data['page'] !!}">
         {!! $data['content'] !!}
     </section>
-    <section class="menu">
+    <section class="menu" >
         <div class="menubox">
             <!-- <form id="tfnewsearch" method="get" action="http://www.google.com">
                 <input type="text" class="tftextinput" name="q" size="21" maxlength="120" placeholder="Search"><input type="submit" value="search" class="tfbutton">
@@ -47,6 +50,11 @@
                 <li><a href="#">Banamid Institue</a></li>
                 <li><a href="#">Banamid TV</a></li>
             </ul> -->
+        </div>
+        <div class="menu-spin" id="rev-3">
+            <div>
+                <p>Explore</p><p>X</p>
+            </div>
         </div>
     </section>
 </section>
@@ -220,7 +228,7 @@
     <div class="footer-grid">
         <h3>Contact us</h3>
         <!-- <p class="under-contact-identity">Meghdad Sharfi Architects</p> -->
-        <p>phone: +98 21 88 88 8888 / +98 21 88 88 8888</p>
+        <a href="tel:+98(21)26410305">Phone : +98(21)26410305-7</a>
         <i class="a-w-d fa fa-facebook-square"></i>
         <i class="a-w-d fa fa-instagram"></i>
         <i class="a-w-d fa fa-map"></i>
